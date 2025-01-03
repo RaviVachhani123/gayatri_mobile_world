@@ -19,9 +19,9 @@ class _SellProductPageState extends State<SellProductPage> {
   final _formKey = GlobalKey<FormState>();
   String? selectedState, selectedCity, selectedBrand;
 
-  InputDecoration _inputDecoration(String label) {
+  InputDecoration _inputDecoration(String lable) {
     return InputDecoration(
-      labelText: label,
+      hintText: lable,
       enabledBorder:OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.0),
         borderSide: BorderSide(color: customstheam.icon_col,width: 1.5),
@@ -180,26 +180,41 @@ class _SellProductPageState extends State<SellProductPage> {
 
                           height: 75,
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            // mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               InkWell(
                                 onTap: (){},
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.photo,color: customstheam.icon_col,),
-                                    SizedBox(width: 10,),
-                                    Text("Gallery",style: TextStyle(fontSize: 15),)
-                                  ],
+                                child: Center(
+                                  child: Container(
+                                    height: 75,
+                                    width: width/2,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.photo,color: customstheam.icon_col,),
+                                        SizedBox(width: 10,),
+                                        Text("Gallery",style: TextStyle(fontSize: 15),)
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                               InkWell(
+
                                 onTap: (){},
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.camera,color: customstheam.icon_col,),
-                                    SizedBox(width: 10,),
-                                    Text("Camera",style: TextStyle(fontSize: 15),)
-                                  ],
+                                child: Center(
+                                  child: Container(
+                                    height:75,
+                                    width:width/2,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.camera,color: customstheam.icon_col,),
+                                        SizedBox(width: 10,),
+                                        Text("Camera",style: TextStyle(fontSize: 15),)
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -260,96 +275,6 @@ class _SellProductPageState extends State<SellProductPage> {
           ),
         ),
       ),
-
-
-
-      // bottomNavigationBar: Container(
-      //   color: Colors.yellow,
-      //   padding: EdgeInsets.symmetric(horizontal: 16),
-      //   child: Stack(
-      //     alignment: Alignment.center,
-      //     children: [
-      //
-      //       // Submit Button
-      //       Container(
-      //         height: 60,
-      //         decoration: BoxDecoration(
-      //           borderRadius: BorderRadius.circular(12),
-      //           gradient: LinearGradient(
-      //             colors: [Color(0xFF01B393), Color(0xFF01B393)],
-      //             begin: Alignment.topCenter,
-      //             end: Alignment.bottomCenter,
-      //           ),
-      //           // border: Border.all(
-      //           //   color: Colors.green.shade800,
-      //           //   width: 1.5,
-      //           // ),
-      //         ),
-      //         child: ElevatedButton(
-      //           onPressed: () {
-      //             if (_formKey.currentState!.validate()) {
-      //               ScaffoldMessenger.of(context).showSnackBar(
-      //                 SnackBar(content: Text('Form submitted successfully!')),
-      //               );
-      //             }
-      //           },
-      //           style: ElevatedButton.styleFrom(
-      //             backgroundColor: Colors.transparent,
-      //             shadowColor: Colors.transparent,
-      //             padding: EdgeInsets.symmetric(vertical: 18),
-      //             minimumSize: Size(double.infinity, 60),
-      //             shape: RoundedRectangleBorder(
-      //               borderRadius: BorderRadius.circular(12),
-      //             ),
-      //           ),
-      //           child: Text(
-      //             'Submit',
-      //             style: TextStyle(
-      //               fontSize: 18,
-      //               // fontWeight: FontWeight.bold,
-      //               color: Colors.white,
-      //               letterSpacing: 1.2,
-      //             ),
-      //           ),
-      //         ),
-      //       ),
-      //
-      //       // Left Dot
-      //       Positioned(
-      //         left: -6,
-      //         child: Container(
-      //           width: 12,
-      //           height: 12,
-      //           decoration: BoxDecoration(
-      //             color: Colors.white,
-      //             shape: BoxShape.circle,
-      //             border: Border.all(color: Colors.green.shade700,),
-      //           ),
-      //         ),
-      //       ),
-      //
-      //       // Right Dot
-      //       Positioned(
-      //         right: -6,
-      //         child: Container(
-      //           width: 12,
-      //           height: 12,
-      //           decoration: BoxDecoration(
-      //             color: Colors.white,
-      //             shape: BoxShape.circle,
-      //             border: Border.all(color: Colors.green.shade700,),
-      //           ),
-      //         ),
-      //       ),
-      //
-      //
-      //     ],
-      //   ),
-      // ),
-
-
-
-
 
     );
   }

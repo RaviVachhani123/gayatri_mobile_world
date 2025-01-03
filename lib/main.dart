@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:gayatri_mobile_world/Add_Sim_Card_Page.dart';
 import 'package:gayatri_mobile_world/ContactUs_page.dart';
+import 'package:gayatri_mobile_world/Download_Report_Page.dart';
+import 'package:gayatri_mobile_world/Finance_Dashboard_Page.dart';
+import 'package:gayatri_mobile_world/Sim_Card_History_Page.dart';
 import 'package:gayatri_mobile_world/more_page.dart';
+
+import 'Select_Brand_Page.dart';
+import 'Sold_Product_Page.dart';
+import 'Sold_Products_Report.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,8 +43,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: more_page_screen(),
-      // home: ContactUs()
+      // home: more_page_screen(),
+      // home: SoldProductsReportPage(),
+      // home: FinanceDashboardPage(),
+      // home: AddSimCardPage(),
+      // home: IdProofDropdown(),
+      // home: DownloadReportPage(),
+      // home: SimCardHistoryPage(),
+      home: SoldProductPage(),
     );
   }
 }
