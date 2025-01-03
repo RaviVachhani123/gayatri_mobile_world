@@ -44,13 +44,16 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: more_page_screen(),
-      // home: SoldProductsReportPage(),
-      // home: FinanceDashboardPage(),
-      // home: AddSimCardPage(),
       // home: IdProofDropdown(),
-      // home: DownloadReportPage(),
+
+      // home: SoldProductPage(),
+      // home: SoldProductsReportPage(),
+      home: FinanceDashboardPage(),
+      // home: AddSimCardPage(),
       // home: SimCardHistoryPage(),
-      home: SoldProductPage(),
+      // home: DownloadReportPage(),
+
+
     );
   }
 }

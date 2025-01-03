@@ -76,7 +76,7 @@ class _SoldProductPageState extends State<SoldProductPage> {
                     fontWeight: customstheam.h1_weight,
                       color: _currentPage == 0
                           ? customstheam.icon_col
-                          : Colors.grey,)
+                          : Colors.black,)
                     ),
                   ),
                 ),
@@ -109,7 +109,7 @@ class _SoldProductPageState extends State<SoldProductPage> {
                       fontSize: customstheam.h1,
                       color: _currentPage == 1
                           ? customstheam.icon_col
-                          : Colors.grey,
+                          : Colors.black,
                     )
 
                     ),
@@ -128,7 +128,7 @@ class _SoldProductPageState extends State<SoldProductPage> {
               controller: _pageController,
               children: [
                 Individual_Product(),
-                Individual_Product(),
+                Bulk_Sold(),
               ],
             ),
             ),
@@ -156,6 +156,7 @@ class _Individual_ProductState extends State<Individual_Product> {
     final double height = MediaQuery.sizeOf(context).height;
     final double width = MediaQuery.sizeOf(context).width;
     return Container(
+      color: Colors.white,
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,15 +191,102 @@ class _Individual_ProductState extends State<Individual_Product> {
           ),
 
 
-          ///if there is no data in inventory
+          ///if there is no data in individual product
           Column(
             children: [
               Container(
+
                 alignment: Alignment.topCenter,
                 child: Lottie.asset('assets/images/Emptybox.json',height: height*0.4),
               ),
               Text("No sold products found",style: TextStyle(fontSize: customstheam.h1,fontWeight: customstheam.h1_weight)),
 
+              SizedBox(height: 14,),
+              Container(
+                width: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(
+                    
+                    
+                    color: Colors.black, // Border color
+                    width: 1.0,         // Border width
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                children: [
+                Icon(Icons.refresh , color: Colors.deepPurple,),
+                SizedBox(width: 5,),
+                Text('Refresh',style: TextStyle(color: Colors.deepPurple),),
+                ],
+              ),
+                ),
+              )
+            ],
+          )
+
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+class Bulk_Sold extends StatefulWidget {
+  const Bulk_Sold({super.key});
+
+  @override
+  State<Bulk_Sold> createState() => _Bulk_SoldState();
+}
+
+class _Bulk_SoldState extends State<Bulk_Sold> {
+  @override
+  Widget build(BuildContext context) {
+    final double height = MediaQuery.sizeOf(context).height;
+    final double width = MediaQuery.sizeOf(context).width;
+    return Container(
+      color: Colors.white,
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+
+          ///if there is no data in bulk sold
+          Column(
+            children: [
+              Container(
+
+                alignment: Alignment.topCenter,
+                child: Lottie.asset('assets/images/Emptybox.json',height: height*0.4),
+              ),
+              Text("No sold products found",style: TextStyle(fontSize: customstheam.h1,fontWeight: customstheam.h1_weight)),
+              SizedBox(height: 14,),
+              Container(
+                width: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(
+                    color: Colors.black, // Border color
+                    width: 1.0,         // Border width
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.refresh , color: Colors.deepPurple,),
+                      SizedBox(width: 5,),
+                      Text('Refresh',style: TextStyle(color: Colors.deepPurple),),
+                    ],
+                  ),
+                ),
+              )
             ],
           )
 
