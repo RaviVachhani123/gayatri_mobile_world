@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'customfolder/custom_things.dart';
+import '../customfolder/custom_things.dart';
 
 class SimCardHistoryPage extends StatefulWidget {
   const SimCardHistoryPage({super.key});
@@ -13,8 +13,9 @@ class _SimCardHistoryPageState extends State<SimCardHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        // backgroundColor: Colors.red ,
+        backgroundColor: Colors.white ,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: customstheam.icon_col),
           onPressed: () {
@@ -23,7 +24,7 @@ class _SimCardHistoryPageState extends State<SimCardHistoryPage> {
         ),
         title: Text(
           'Sim card history',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 18),
         ),
         actions: [
 

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'customfolder/custom_things.dart';
+import '../customfolder/custom_things.dart';
 
 class DownloadReportPage extends StatefulWidget {
   const DownloadReportPage({super.key});
@@ -94,7 +94,9 @@ class _DownloadReportPageState extends State<DownloadReportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: customstheam.icon_col),
           onPressed: () {
@@ -103,7 +105,7 @@ class _DownloadReportPageState extends State<DownloadReportPage> {
         ),
         title: Text(
           'Download Report',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 18),
         ),
         foregroundColor: Colors.black,
         elevation: 0,

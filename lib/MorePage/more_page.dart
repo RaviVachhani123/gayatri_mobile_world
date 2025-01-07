@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:gayatri_mobile_world/Sell_Product_Page.dart';
+import 'package:gayatri_mobile_world/MorePage/Sell_Product_Page.dart';
 import 'package:gayatri_mobile_world/customfolder/custom_things.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'ContactUs_page.dart';
@@ -145,7 +145,6 @@ class _more_page_screenState extends State<more_page_screen> {
             alignment: Alignment.topCenter,
             children: [
               Container(
-
                 padding: EdgeInsets.fromLTRB(16, 56, 16, 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),

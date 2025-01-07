@@ -207,8 +207,6 @@ class _Individual_ProductState extends State<Individual_Product> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   border: Border.all(
-                    
-                    
                     color: Colors.black, // Border color
                     width: 1.0,         // Border width
                   ),
@@ -216,12 +214,12 @@ class _Individual_ProductState extends State<Individual_Product> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
-                children: [
-                Icon(Icons.refresh , color: Colors.deepPurple,),
-                SizedBox(width: 5,),
-                Text('Refresh',style: TextStyle(color: Colors.deepPurple),),
-                ],
-              ),
+                    children: [
+                      Icon(Icons.refresh , color: Colors.deepPurple,),
+                      SizedBox(width: 5,),
+                      Text('Refresh',style: TextStyle(color: Colors.deepPurple),),
+                    ],
+                  ),
                 ),
               )
             ],

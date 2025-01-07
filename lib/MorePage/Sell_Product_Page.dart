@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'Select_Brand_Page.dart';
 import 'Select_City_Page.dart';
 import 'Select_State_Page.dart';
-import 'customfolder/custom_things.dart';
+import '../customfolder/custom_things.dart';
 
 
 

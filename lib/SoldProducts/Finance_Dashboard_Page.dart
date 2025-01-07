@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'customfolder/custom_things.dart';
+import '../customfolder/custom_things.dart';
 
 class FinanceDashboardPage extends StatefulWidget {
   const FinanceDashboardPage({super.key});
@@ -29,7 +29,7 @@ class _FinanceDashboardPageState extends State<FinanceDashboardPage> {
         ),
         title: Text(
           'Finance Dashboard',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 18),
         ),
         foregroundColor: Colors.black,
         elevation: 0,
