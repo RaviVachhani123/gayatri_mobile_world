@@ -13,12 +13,23 @@ class customstheam{
   //Finance dashbord
   static Color bgfinance=Color(0xFFFFF2DF);
   static Color line_col=Color(0xFFE3DAD3);
-  static double text_responsive=16;
+  static double text_responsive=14;
+  static double text_responsive16=16;
+  static double text_heading=18;
+  static double icon_s=24;
+
+
 
   customstheam(BuildContext context){
     this.height = MediaQuery.sizeOf(context).height;
     this.width = MediaQuery.sizeOf(context).width;
-    text_responsive = width*0.08;
+
+    text_responsive = width*0.035;
+    text_responsive16= width*0.04;
+    text_heading = width*0.045;
+    icon_s=width*0.06;
+
+
 
   }
 

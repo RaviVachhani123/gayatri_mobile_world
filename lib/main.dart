@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gayatri_mobile_world/Ads_Management/BannerAdsPage.dart';
 import 'package:gayatri_mobile_world/SoldProducts/Add_Sim_Card_Page.dart';
 import 'package:gayatri_mobile_world/MorePage/ContactUs_page.dart';
 import 'package:gayatri_mobile_world/SoldProducts/Download_Report_Page.dart';
@@ -9,7 +10,12 @@ import 'package:gayatri_mobile_world/Unlock_and_repair_phone_data_management/Add
 import 'package:gayatri_mobile_world/Unlock_and_repair_phone_data_management/Add_Unlock_Product.dart';
 import 'package:gayatri_mobile_world/Unlock_and_repair_phone_data_management/Repair_Product_Report.dart';
 import 'package:gayatri_mobile_world/Unlock_and_repair_phone_data_management/Unlock_Product_Report.dart';
+import 'package:gayatri_mobile_world/customfolder/custom_things.dart';
 
+
+import 'Ads_Management/Featured_Product_Ad_Page.dart';
+import 'AppThemes/TextThemes.dart';
+import 'Inventory,Finance,Barcode_Report_Management/Inventory_Report_Page.dart';
 import 'MorePage/Select_Brand_Page.dart';
 import 'SoldProducts/Sold_Product_Page.dart';
 import 'SoldProducts/Sold_Products_Report.dart';
@@ -26,6 +32,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    TextSizes textsizes = new TextSizes(context);
+    customstheam textresponsive = new customstheam(context);
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -51,6 +59,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
 
+      // home:InventoryReportPage(),
+
       // home: more_page_screen(),
 
       // home: SoldProductPage(),
@@ -67,6 +77,11 @@ class MyApp extends StatelessWidget {
       // home:AddUnlockProduct(),
       // home: AddRepairPhone(),
       // home: ViewRepairData(),
+
+      // home: FeaturedProductAdPage(),
+      home: BannerAdsPage(),
+
+
     );
   }
 }
