@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gayatri_mobile_world/AppThemes/AppColors.dart';
 import '../customfolder/custom_things.dart';
 
 class SoldProductsReportPage extends StatefulWidget {
@@ -94,7 +95,9 @@ class _SoldProductsReportPageState extends State<SoldProductsReportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.bgcolor,
       appBar: AppBar(
+        backgroundColor: AppColors.bgcolor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: customstheam.icon_col),
           onPressed: () {

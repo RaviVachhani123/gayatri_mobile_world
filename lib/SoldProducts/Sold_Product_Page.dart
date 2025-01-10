@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:gayatri_mobile_world/customfolder/custom_things.dart';
 import 'package:lottie/lottie.dart';
 
+import '../AppThemes/AppColors.dart';
+
 class SoldProductPage extends StatefulWidget {
   const SoldProductPage({super.key});
 
@@ -29,7 +31,9 @@ class _SoldProductPageState extends State<SoldProductPage> {
     final double height = MediaQuery.sizeOf(context).height;
     final double width = MediaQuery.sizeOf(context).width;
     return Scaffold(
+      backgroundColor: AppColors.bgcolor,
       appBar: AppBar(
+        backgroundColor: AppColors.bgcolor,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: customstheam.icon_col),

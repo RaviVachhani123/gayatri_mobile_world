@@ -79,7 +79,7 @@ class MyApp extends StatelessWidget {
       // home: ViewRepairData(),
 
       // home: FeaturedProductAdPage(),
-      home: BannerAdsPage(),
+      // home: BannerAdsPage(),
 
 
     );

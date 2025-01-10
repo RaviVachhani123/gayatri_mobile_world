@@ -12,7 +12,7 @@ class FeaturedProductAdPage extends StatefulWidget {
 
 class _FeaturedProductAdPageState extends State<FeaturedProductAdPage> {
 
-  String? groupValue;
+  bool? groupValue = false;
 
 
   @override
@@ -101,41 +101,48 @@ class _FeaturedProductAdPageState extends State<FeaturedProductAdPage> {
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * 0.02),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-        
-                      Row(
-                        children: [
-                          Radio<String>(
-                            value: 'click1',
-                            groupValue: groupValue,
-                            onChanged: (value) {
-                              setState(() {
-                                groupValue = value; // Update the selected value
-                              });
-                            },
-                          ),
-        
-                          SizedBox(width: width * 0.04,),
-        
-                          Text('For 10 Days',
-                            style: TextStyle(
-                              fontSize: customstheam.text_responsive,
+                  child: InkWell(
+                    onTap: (){
+                      setState(() {
+                        groupValue=!groupValue!;
+                      });
+                    },
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Row(
+                          children: [
+                            Radio(
+                              value: true,
+                              groupValue: groupValue,
+                              onChanged: (value) {
+                                setState(() {
+                                  groupValue = value; // Update the selected value
+                                });
+                              },
                             ),
-                          ),
-                        ],
-                      ),
-        
-                      Row(
-                        children: [
-                          Icon(Icons.currency_rupee, color: customstheam.icon_col,
-                            size: customstheam.text_responsive,),
-                          Text("50.0", style: TextStyle(fontSize: customstheam
-                              .text_responsive, fontWeight: customstheam
-                              .h1_weight, color: customstheam.icon_col),)
-                        ],
-                      ),
-                    ],
+
+                            SizedBox(width: width * 0.04,),
+
+                            Text('For 10 Days',
+                              style: TextStyle(
+                                fontSize: customstheam.text_responsive,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        Row(
+                          children: [
+                            Icon(Icons.currency_rupee, color: customstheam.icon_col,
+                              size: customstheam.text_responsive,),
+                            Text("50.0", style: TextStyle(fontSize: customstheam
+                                .text_responsive, fontWeight: customstheam
+                                .h1_weight, color: customstheam.icon_col),)
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

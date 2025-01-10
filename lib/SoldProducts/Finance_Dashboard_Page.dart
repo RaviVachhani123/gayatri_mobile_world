@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gayatri_mobile_world/AppThemes/AppColors.dart';
 import '../customfolder/custom_things.dart';
 
 class FinanceDashboardPage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _FinanceDashboardPageState extends State<FinanceDashboardPage> {
     final double width = MediaQuery.sizeOf(context).width;
 
     return Scaffold(
+      backgroundColor:  AppColors.bgcolor,
       appBar: AppBar(
         backgroundColor: customstheam.bgfinance,
         leading: IconButton(
