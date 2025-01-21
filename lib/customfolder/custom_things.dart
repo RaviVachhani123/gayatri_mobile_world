@@ -17,6 +17,11 @@ class customstheam{
   static double text_responsive16=16;
   static double text_heading=18;
   static double icon_s=24;
+  static double icon_s36=36;
+  static double text_responsive12=12;
+  static double text_responsive10=10;
+  static double text_responsive18=18;
+
 
 
 
@@ -28,6 +33,10 @@ class customstheam{
     text_responsive16= width*0.04;
     text_heading = width*0.045;
     icon_s=width*0.06;
+    icon_s36=width*0.09;
+    text_responsive12=width*0.03;
+    text_responsive10=width*0.025;
+    text_responsive18=width*0.045;
 
 
 

@@ -59,9 +59,11 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
 
+
+
       // home:InventoryReportPage(),
 
-      // home: more_page_screen(),
+      home: more_page_screen(),
 
       // home: SoldProductPage(),
       // home: SoldProductsReportPage(),

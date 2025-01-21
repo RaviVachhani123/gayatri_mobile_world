@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:gayatri_mobile_world/AppThemes/AppColors.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 class TextSizes{
   late final double height;
   late final double width;
