@@ -52,7 +52,7 @@ class _SelectStateOfIndiaState extends State<SelectStateOfIndia> {
     });
   }
   Future<void> loadStatesFromAssets() async {
-    final String response = await rootBundle.loadString('Assets/JsonData/StateAndCity.json');
+    final String response = await rootBundle.loadString('assets/JsonData/StateAndCity.json');
     final Map<String, dynamic> data = jsonDecode(response);
 
     if (widget.iscitypicker) {

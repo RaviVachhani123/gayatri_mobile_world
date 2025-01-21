@@ -119,7 +119,7 @@ class _SellProductPageState extends State<SellProductPage> {
   String? selectedBrand;
 
   InputDecoration _inputDecoration(String lable,String hinttext) {
-    return InputDecoration(
+    return InputDecoration(errorStyle: TextStyle(fontSize: customstheam.text_responsive10),
       label: Text(lable),
       labelStyle:TextStyle(color: Colors.grey,fontSize: customstheam.text_responsive,),
       hintText: hinttext,
@@ -131,7 +131,7 @@ class _SellProductPageState extends State<SellProductPage> {
         borderRadius: BorderRadius.circular(8.0),
         borderSide: BorderSide(width:MediaQuery.sizeOf(context).width*0.0025,color: Colors.red),
       ),
-      contentPadding: EdgeInsets.symmetric(horizontal:MediaQuery.sizeOf(context).height*0.018 , vertical:MediaQuery.sizeOf(context).width*0.012),
+      contentPadding: EdgeInsets.symmetric(horizontal:MediaQuery.sizeOf(context).width*0.04 , vertical:MediaQuery.sizeOf(context).width*0.02),
     );
   }
 
@@ -152,7 +152,7 @@ class _SellProductPageState extends State<SellProductPage> {
               border: CustomInputDecoration.CustomDeco(context),
               focusedBorder: CustomInputDecoration.CustomDeco(context),
               disabledBorder: CustomInputDecoration.CustomDeco(context),
-              contentPadding: EdgeInsets.symmetric(horizontal:MediaQuery.sizeOf(context).height*0.018 , vertical:MediaQuery.sizeOf(context).width*0.012),
+              contentPadding: EdgeInsets.symmetric(horizontal:MediaQuery.sizeOf(context).width*0.04 , vertical:MediaQuery.sizeOf(context).width*0.02),
             )
         )
     );
@@ -189,18 +189,18 @@ class _SellProductPageState extends State<SellProductPage> {
             children: [
               Text("Pls note: Your Mobile Ad will be live for 7 days to all sellers registed on Gayatri Mobile Word.",
                 style: TextStyle(color: customstheam.icon_col,fontWeight:FontWeight.w400,fontSize: customstheam.text_responsive16),),
-              SizedBox(height: height*0.015,),
+              SizedBox(height: width*0.03),
 
               Text('OWNER DETAILS',
                   style: TextStyle(fontWeight: FontWeight.w400, fontSize: customstheam.text_responsive16)),
-              SizedBox(height: height*0.015),
+              SizedBox(height: width*0.03),
 
               TextFormField(
                 style: TextStyle(color: Colors.black,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400),
                 decoration: _inputDecoration('Name','Enter Your Name',),
                 validator: (value) => value!.isEmpty ? 'Enter your name' : null,
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               TextFormField(
                 style: TextStyle(color: Colors.black,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400),
@@ -208,7 +208,7 @@ class _SellProductPageState extends State<SellProductPage> {
                 keyboardType: TextInputType.phone,
                 // validator: (value) => value!.isEmpty ? 'Enter your number' : null,
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               //select state
               InkWell(
@@ -231,11 +231,11 @@ class _SellProductPageState extends State<SellProductPage> {
                     // hintText: statecontroller.text.isEmpty?"Select State...":"${statecontroller.text}",
                     hintStyle:TextStyle(color: Colors.grey,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400,),
                     suffixIcon: Icon(Icons.arrow_forward_ios, size: customstheam.text_responsive, color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(horizontal:height*0.018 , vertical:width*0.012),
+                    contentPadding: EdgeInsets.symmetric(horizontal:width*0.04 , vertical:width*0.02),
                   ),
                 ),
               ),
-              SizedBox(height: height*0.015,),
+              SizedBox(height: width*0.03),
 
               //select city
               InkWell(
@@ -258,11 +258,11 @@ class _SellProductPageState extends State<SellProductPage> {
                     hintText: "Select City...",
                     hintStyle:TextStyle(color: Colors.grey,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400,),
                     suffixIcon: Icon(Icons.arrow_forward_ios, size: customstheam.text_responsive, color: Colors.black),
-                    contentPadding: EdgeInsets.symmetric(horizontal:height*0.018 , vertical:width*0.012),
+                    contentPadding: EdgeInsets.symmetric(horizontal:width*0.04 , vertical:width*0.02),
                   ),
                 ),
               ),
-              SizedBox(height: height*0.015,),
+              SizedBox(height: width*0.03),
 
               _selectField('Select Brand...',selectedBrand,() async {
                   final result = await Navigator.push(
@@ -272,21 +272,21 @@ class _SellProductPageState extends State<SellProductPage> {
                   setState(() => selectedBrand = result);
                 },
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               TextFormField(
                 style: TextStyle(color: Colors.black,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400),
                 decoration: _inputDecoration('Product Title','Enter Your Product Title'),
                 validator: (value) => value!.isEmpty ? 'Enter product title' : null,
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               TextFormField(
                 style: TextStyle(color: Colors.black,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400),
                 decoration: _inputDecoration('Product Description','Enter Your Product Description'),
                 validator: (value) => value!.isEmpty ? 'Enter product description' : null,
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               TextFormField(
                 style: TextStyle(color: Colors.black,fontSize: customstheam.text_responsive,fontWeight: FontWeight.w400),
@@ -294,13 +294,13 @@ class _SellProductPageState extends State<SellProductPage> {
                 keyboardType: TextInputType.number,
                 validator: (value) => value!.isEmpty ? 'Enter offer price' : null,
               ),
-              SizedBox(height:height*0.015),
+              SizedBox(height:width*0.03),
 
               Text(
                 "PRODUCT IMAGES (${_images.length}/$_imageLimit)",
                 style: TextStyle(fontSize: customstheam.text_responsive16, fontWeight: FontWeight.w400),
               ),
-              SizedBox(height: height*0.015),
+              SizedBox(height: width*0.03),
 
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -313,7 +313,7 @@ class _SellProductPageState extends State<SellProductPage> {
                           height: width*0.25,
                           width: width*0.25,
                           decoration: BoxDecoration(
-                            border: Border.all(color: customstheam.icon_col),
+                            border: Border.all(color: customstheam.icon_col,width: width*0.0025),
                             borderRadius: BorderRadius.circular(8),
                             color: customstheam.icon_col.withOpacity(0.1),
                           ),
@@ -343,7 +343,7 @@ class _SellProductPageState extends State<SellProductPage> {
                           width: width*0.25,
                           margin: EdgeInsets.only(right: 10),
                           decoration: BoxDecoration(
-                            border: Border.all(color: customstheam.icon_col),
+                            border: Border.all(color: customstheam.icon_col,width: width*0.0025),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: ClipRRect(
@@ -394,7 +394,7 @@ class _SellProductPageState extends State<SellProductPage> {
 
       bottomNavigationBar: Container(
         color: Colors.white,
-        padding: EdgeInsets.symmetric(horizontal: height*0.018, vertical: width*0.012),
+        padding: EdgeInsets.symmetric(horizontal: width*0.04, vertical: width*0.02),
         // Padding: EdgeInsets.symmetric(horizontal:height*0.018 , vertical:width*0.012),
 
         child: ElevatedButton(
@@ -410,7 +410,7 @@ class _SellProductPageState extends State<SellProductPage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
-            padding: EdgeInsets.symmetric(vertical: 14),
+            padding: EdgeInsets.symmetric(vertical: width*0.02),
           ),
           child: Text(
             'Submit',
